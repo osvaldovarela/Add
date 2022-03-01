@@ -10,14 +10,14 @@
   /**
    * Easy selector helper function
    */
-  const select = (el, all = false) => {
+  /* const select = (el, all = false) => {
     el = el.trim()
     if (all) {
       return [...document.querySelectorAll(el)]
     } else {
       return document.querySelector(el)
     }
-  }
+  } */
 
   /**
    * Easy event listener function
@@ -38,8 +38,8 @@
    */
   /* const onscroll = (el, listener) => {
     el.addEventListener('scroll', listener)
-  } */
-
+  }
+ */
   /**
    * Navbar links active state on scroll
    */
@@ -79,7 +79,7 @@
   }
 
   /**
-   * Toggle .header-scrolled class to #header when page is scrolled
+   * Toggle .border class to #header when page is scrolled
    */
   let selectHeader = select('#header')
   if (selectHeader) {
@@ -97,7 +97,7 @@
   /**
    * Back to top button
    */
-  let backtotop = select('.back-to-top')
+  /* let backtotop = select('.back-to-top')
   if (backtotop) {
     const toggleBacktotop = () => {
       if (window.scrollY > 100) {
@@ -108,7 +108,7 @@
     }
     window.addEventListener('load', toggleBacktotop)
     onscroll(document, toggleBacktotop)
-  }
+  } */
 
   /**
    * Mobile nav toggle
@@ -148,7 +148,7 @@
   }, true)
 
   /**
-   * Scroll with ofset on page load with hash links in the url
+   * Scroll with offset on page load with hash links in the url
    */
   /* window.addEventListener('load', () => {
     if (window.location.hash) {
@@ -177,10 +177,10 @@
   /**
    * Initiate portfolio lightbox 
    */
-  const portfolioLightbox = GLightbox({
+  /* const portfolioLightbox = GLightbox({
     selector: '.portfolio-lightbox'
   });
-
+ */
   /**
    * Testimonials slider
    */
@@ -202,7 +202,7 @@
   /**
    * Portfolio details slider
    */
-  new Swiper('.portfolio-details-slider', {
+  /* new Swiper('.portfolio-details-slider', {
     speed: 400,
     loop: true,
     autoplay: {
@@ -214,16 +214,16 @@
       type: 'bullets',
       clickable: true
     }
-  });
+  }); */
 
   /**
    * Preloader
    */
-  let preloader = select('#preloader');
+  /* let preloader = select('#preloader');
   if (preloader) {
     window.addEventListener('load', () => {
       preloader.remove()
     });
-  }
+  } */
 
-})()
+})
